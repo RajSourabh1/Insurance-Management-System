@@ -11,7 +11,7 @@ This is a Spring Boot application with around 15 APIs for performing all the CRU
 # Description
 This Insurance Management application can do the following tasks :
 
-- CLIENTS
+* CLIENTS
 - Clients can register themselves on the application.
 - Clients can delete themselves.
 - Clients can update their information by providing all the attributes. (If he wants to change the value of some attributes then he will have to provide the update
