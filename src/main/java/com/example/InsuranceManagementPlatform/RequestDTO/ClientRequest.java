@@ -5,8 +5,6 @@ import lombok.Data;
 @Data
 public class ClientRequest {
 
-    private int id;
-
     private String name;
 
     private String dateOfBirth;

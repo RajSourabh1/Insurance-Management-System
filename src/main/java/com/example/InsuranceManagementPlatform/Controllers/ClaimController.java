@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/claims")
+@RequestMapping("/api/claims")
 public class ClaimController {
 
     @Autowired
@@ -30,16 +30,16 @@ public class ClaimController {
     }
 
     @PutMapping("/{id}")
-    public String updateClaim(@RequestParam int claimNumber, @RequestParam String description){
+    public String updateClaim(@PathVariable("id") int claimNumber, @RequestParam String description){
         return claimService.updateClaim(claimNumber,description);
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/admin/{id}")
     public String updateClaimByAdmin(@RequestParam int claimNumber, @RequestParam String resolved){
         return claimService.updateClaim(claimNumber,resolved);
     }
 
-    @DeleteMapping("{/id}")
+    @DeleteMapping("/{id}")
     public String deleteClaim(@PathVariable("id")int id){
         return claimService.deleteClaim(id);
     }

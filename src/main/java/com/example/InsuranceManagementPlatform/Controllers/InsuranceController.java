@@ -12,7 +12,7 @@ import java.util.Date;
 import java.util.List;
 
 @RestController
-@RequestMapping("/policies")
+@RequestMapping("/api/policies")
 public class InsuranceController {
 
     @Autowired
@@ -29,8 +29,10 @@ public class InsuranceController {
     }
 
     @PostMapping
-    public String createInsurance(@RequestBody() InsuranceRequest insuranceRequest) throws Exception {
-        return insuranceService.createInsurance(insuranceRequest);
+    //public String createInsurance(@RequestBody()InsuranceRequest insuranceRequest) throws Exception {
+    public String createInsurance(@RequestParam int clientId, @RequestParam String type, @RequestParam int coverageAmount,
+        @RequestParam int premium, @RequestParam Date endDate) throws Exception{
+        return insuranceService.createInsurance(clientId,type,coverageAmount,premium,endDate);
     }
 
     // updating policy end date;
@@ -39,7 +41,7 @@ public class InsuranceController {
         return insuranceService.updateInsurance(policyNumber,endDate);
     }
 
-    @DeleteMapping("{/id}")
+    @DeleteMapping("/{id}")
     public String deleteInsurance(@PathVariable("id")int id){
         return insuranceService.deleteInsurance(id);
     }

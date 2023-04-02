@@ -24,6 +24,7 @@ public class Insurance {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int policyNumber;
 
+    @Enumerated(value = EnumType.STRING)
     private PolicyType Type;
 
     private int coverageAmount;

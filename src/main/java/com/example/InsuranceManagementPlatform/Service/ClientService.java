@@ -43,8 +43,10 @@ public class ClientService {
         }
     }
 
-    public String updateClient(Client client){
-        clientRepository.save(client);
+    public String updateClient(int id,ClientRequest clientRequest){
+        Client client = clientRepository.findById(id).get();
+        Client client1 = ClientConvertor.DtoToEntity(client,clientRequest);
+        clientRepository.save(client1);
         return "successfully updated";
     }
 

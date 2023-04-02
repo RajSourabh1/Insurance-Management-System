@@ -39,8 +39,8 @@ public class InsuranceService {
         }
     }
 
-    public String createInsurance(InsuranceRequest insuranceRequest) throws Exception {
-        String type = insuranceRequest.getType();
+    public String createInsurance(int clientId,String type,int coverageAmount,int premium,Date endDate) throws Exception {
+        //System.out.println(insuranceRequest.getType());
         if(type.equalsIgnoreCase("health_insurance") || type.equalsIgnoreCase("life_insurance")
             || type.equalsIgnoreCase("home_insurance") || type.equalsIgnoreCase("vehicle_insurance")
             || type.equalsIgnoreCase("child_insurance")){
@@ -67,9 +67,11 @@ public class InsuranceService {
                 insurance.setType(PolicyType.Child_Insurance);
             }
 
-            insurance.setEndDate(insuranceRequest.getEndDate());
+            insurance.setEndDate(endDate);
+            insurance.setPremium(premium);
+            insurance.setCoverageAmount(coverageAmount);
 
-            Client client = clientRepository.findById(insuranceRequest.getClientId()).get();
+            Client client = clientRepository.findById(clientId).get();
             insurance.getClients().add(client);
 
             client.getInsurances().add(insurance);
