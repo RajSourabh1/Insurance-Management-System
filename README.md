@@ -12,14 +12,14 @@ This is a Spring Boot application with around 15 APIs for performing all the CRU
 This Insurance Management application can do the following tasks :
 
 * CLIENTS
-- Clients can register themselves on the application.
-- Clients can delete themselves.
-- Clients can update their information by providing all the attributes. (If he wants to change the value of some attributes then he will have to provide the update
+   - Clients can register themselves on the application.
+   - Clients can delete themselves.
+   - Clients can update their information by providing all the attributes. (If he wants to change the value of some attributes then he will have to provide the update
   value of this attribute and if he does not want to update the attribut like name then provide the previous value.)
-- Get all clients.
-- Get a client by their id.
+   - Get all clients.
+   - Get a client by their id.
 * MOVIE
-- Add a new movie in the database.
+   - Add a new movie in the database.
 Remove a movie from the database.
 Get show time with the help of theaterId and movieId
 Get Movie with max shows
