@@ -20,11 +20,6 @@ public class ClientConvertor {
         client.setAddress(clientRequest.getAddress());
         client.setDateOfBirth(clientRequest.getDateOfBirth());
         client.setContactInformation(clientRequest.getContactInformation());
-//        Client client = Client.builder()
-//                .name(clientRequest.getName())
-//                .address(clientRequest.getAddress())
-//                .dateOfBirth(clientRequest.getDateOfBirth())
-//                .contactInformation(clientRequest.getContactInformation()).build();
 
         return client;
     }

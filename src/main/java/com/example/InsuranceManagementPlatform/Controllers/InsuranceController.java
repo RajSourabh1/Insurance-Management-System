@@ -4,6 +4,7 @@ import com.example.InsuranceManagementPlatform.Models.Client;
 import com.example.InsuranceManagementPlatform.Models.Insurance;
 import com.example.InsuranceManagementPlatform.RequestDTO.ClientRequest;
 import com.example.InsuranceManagementPlatform.RequestDTO.InsuranceRequest;
+import com.example.InsuranceManagementPlatform.RequestDTO.UpdateInsuranceRequest;
 import com.example.InsuranceManagementPlatform.Service.InsuranceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -30,15 +31,14 @@ public class InsuranceController {
 
     @PostMapping
     //public String createInsurance(@RequestBody()InsuranceRequest insuranceRequest) throws Exception {
-    public String createInsurance(@RequestParam int clientId, @RequestParam String type, @RequestParam int coverageAmount,
-        @RequestParam int premium, @RequestParam Date endDate) throws Exception{
-        return insuranceService.createInsurance(clientId,type,coverageAmount,premium,endDate);
+    public String createInsurance(@RequestBody InsuranceRequest insuranceRequest) throws Exception{
+        return insuranceService.createInsurance(insuranceRequest);
     }
 
     // updating policy end date;
     @PutMapping("/{id}")
-    public String updateInsurance(@RequestParam int policyNumber, @RequestParam Date endDate){
-        return insuranceService.updateInsurance(policyNumber,endDate);
+    public String updateInsurance(@PathVariable("id") int policyNumber, @RequestBody UpdateInsuranceRequest updateInsuranceRequest) throws Exception {
+        return insuranceService.updateInsurance(policyNumber,updateInsuranceRequest);
     }
 
     @DeleteMapping("/{id}")
