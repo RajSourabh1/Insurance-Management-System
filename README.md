@@ -5,19 +5,21 @@ This is a Spring Boot application with around 15 APIs for performing all the CRU
 ![InsuranceImage](https://user-images.githubusercontent.com/116934640/229379186-0e21929b-7c31-472d-b80e-f5be87858edd.png)
 
 
-Database Schema (EER Diagram)
-image
+# Database Schema (EER Diagram)
 
-Description
-This Movie Booking application can do the following tasks :
 
-USERS
-Users can register themselves on the application.
-Users can deregister themselves.
-Users can update their address.
-Get details of all the tickets booked by a particular user.
-MOVIE
-Add a new movie in the database.
+# Description
+This Insurance Management application can do the following tasks :
+
+- CLIENTS
+- Clients can register themselves on the application.
+- Clients can delete themselves.
+- Clients can update their information by providing all the attributes. (If he wants to change the value of some attributes then he will have to provide the update
+  value of this attribute and if he does not want to update the attribut like name then provide the previous value.)
+- Get all clients.
+- Get a client by their id.
+* MOVIE
+- Add a new movie in the database.
 Remove a movie from the database.
 Get show time with the help of theaterId and movieId
 Get Movie with max shows
