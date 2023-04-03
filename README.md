@@ -13,8 +13,8 @@ This Insurance Management application can do the following tasks :
 
 * CLIENTS
    - Clients can register themselves on the application.
-   - Clients can delete themselves.
-   - Clients can update their information by providing all the attributes. (If he wants to change the value of some attributes then he will have to provide the update
+   - Clients can delete themselves using id.
+   - Clients can update their information by providing all the attributes with the help of id. (If he wants to change the value of some attributes then he will have to provide the update
   value of this attribute and if he does not want to update the attribut like name then provide the previous value.)
    - Get all clients.
    - Get a client by their id.
@@ -26,11 +26,11 @@ This Insurance Management application can do the following tasks :
    - Update a insurance by using its id. (If anyone wants to change the value of some attributes then he will have to provide the update value of this attribute and if he does not want to update the attribute like type, startDate then provide the previous value.)
 * CLAIMS
    - Create a new claim.
-   - Delete a claim.
+   - Delete a claim using its id.
    - Get all claims.
-   - Get a claim.
-   - Update a claim by client. (In this api client can able to update its description.)
-   - Update a claim by admin. (In this api admin can able to update its status.)
+   - Get a claim using its id.
+   - Update a claim by claim using id. (In this api client can able to update its description.)
+   - Update a claim by admin usinh id. (In this api admin can able to update its status.)
 
 Steps to perform operations
 # Clients :
@@ -86,5 +86,8 @@ This project uses the following tech stack:
 * Hibernate
 + MySQL
 
-Conclusion
+# How to run this application locally :
+Clone the repo and open it through the spring application like IntellIJ.
+
+Conclusion :
 This ONLINE-INSURANCE-MANAGEMENT-APPLCIATION provides a strong backend infrastructre to do CRUD operations and managing the database.
