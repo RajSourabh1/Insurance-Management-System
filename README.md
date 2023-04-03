@@ -105,7 +105,8 @@ This project uses the following tech stack:
 + MySQL
 
 # How to run this application locally :
-Clone the repo and open it through the spring application like IntellIJ.
+Clone the repo and open it through the application that supports maven and spring boot like IntellIJ. Before starting the server change the password on
+application.properties with your mysql database password and create a database with the name of 'insurance' in mysql. 
 
 # Conclusion :
 This ONLINE-INSURANCE-MANAGEMENT-APPLCIATION provides a strong backend infrastructre to do CRUD operations and managing the database.
