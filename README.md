@@ -2,7 +2,7 @@
 This is a Spring Boot application with around 15 APIs for performing all the CRUD operations.
 
 ## Design of the Application
-![InsuranceImage](https://user-images.githubusercontent.com/116934640/229379186-0e21929b-7c31-472d-b80e-f5be87858edd.png)
+![Insurance](https://user-images.githubusercontent.com/116934640/229424169-a74ea9fa-de38-41a3-885e-3d070bc40859.png)
 
 
 # Database Schema (EER Diagram)
