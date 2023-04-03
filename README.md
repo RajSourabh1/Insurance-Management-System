@@ -6,6 +6,7 @@ This is a Spring Boot application with around 15 APIs for performing all the CRU
 
 
 # Database Schema (EER Diagram)
+![Insurance-ER](https://user-images.githubusercontent.com/116934640/229427959-8dd40704-2102-4e0b-acbf-9b530f7b8a38.png)
 
 
 # Description
