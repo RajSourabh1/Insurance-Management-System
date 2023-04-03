@@ -98,7 +98,7 @@ image![getAllClaims](https://user-images.githubusercontent.com/116934640/2294231
 
 
 # Tech Stack
-This project uses the following tech stack:
+This project uses some of the following tech stacks:
 
 - Spring Boot
 * Hibernate
