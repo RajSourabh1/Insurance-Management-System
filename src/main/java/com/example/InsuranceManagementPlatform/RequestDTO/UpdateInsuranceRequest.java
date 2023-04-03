@@ -2,7 +2,7 @@ package com.example.InsuranceManagementPlatform.RequestDTO;
 
 import lombok.Data;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 @Data
 public class UpdateInsuranceRequest {
@@ -13,9 +13,7 @@ public class UpdateInsuranceRequest {
 
     private int premium;
 
-    private Date startDate;
+    private LocalDate startDate;
 
-    private Date endDate;
-
-    private int clientId;
+    private LocalDate endDate;
 }

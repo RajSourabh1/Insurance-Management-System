@@ -1,6 +1,7 @@
 package com.example.InsuranceManagementPlatform.Controllers;
 
 import com.example.InsuranceManagementPlatform.Models.Claim;
+import com.example.InsuranceManagementPlatform.ResponseDto.ClaimResponse;
 import com.example.InsuranceManagementPlatform.Service.ClaimService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -15,12 +16,12 @@ public class ClaimController {
     ClaimService claimService;
 
     @GetMapping
-    public List<Claim> fetchAllClaims(){
+    public List<ClaimResponse> fetchAllClaims(){
        return claimService.fetchAllClaims();
     }
 
     @GetMapping("/{id}")
-    public Claim fetchAClaim(@PathVariable("id")int id){
+    public ClaimResponse fetchAClaim(@PathVariable("id")int id){
         return claimService.fetchClaim(id);
     }
 

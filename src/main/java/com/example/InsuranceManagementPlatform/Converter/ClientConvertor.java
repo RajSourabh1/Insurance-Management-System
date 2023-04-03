@@ -2,6 +2,7 @@ package com.example.InsuranceManagementPlatform.Converter;
 
 import com.example.InsuranceManagementPlatform.Models.Client;
 import com.example.InsuranceManagementPlatform.RequestDTO.ClientRequest;
+import com.example.InsuranceManagementPlatform.ResponseDto.ClientResponse;
 
 public class ClientConvertor {
 
@@ -22,5 +23,15 @@ public class ClientConvertor {
         client.setContactInformation(clientRequest.getContactInformation());
 
         return client;
+    }
+
+    public static ClientResponse EntityToDto(Client client){
+        ClientResponse clientResponse = ClientResponse.builder()
+                .name(client.getName())
+                .address(client.getAddress())
+                .dateOfBirth(client.getDateOfBirth())
+                .contactInformation(client.getContactInformation()).build();
+
+        return clientResponse;
     }
 }

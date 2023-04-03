@@ -1,13 +1,16 @@
 package com.example.InsuranceManagementPlatform.Service;
 
+import com.example.InsuranceManagementPlatform.Converter.ClaimConvertor;
 import com.example.InsuranceManagementPlatform.Enums.ClaimStatus;
 import com.example.InsuranceManagementPlatform.Models.Claim;
 import com.example.InsuranceManagementPlatform.Models.Insurance;
 import com.example.InsuranceManagementPlatform.Repository.ClaimRepository;
 import com.example.InsuranceManagementPlatform.Repository.InsuranceRepository;
+import com.example.InsuranceManagementPlatform.ResponseDto.ClaimResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -21,20 +24,29 @@ public class ClaimService {
     @Autowired
     InsuranceRepository insuranceRepository;
 
-    public List<Claim> fetchAllClaims(){
+    public List<ClaimResponse> fetchAllClaims(){
 
         try{
-            return claimRepository.findAll();
+            List<ClaimResponse> ans = new ArrayList<>();
+            List<Claim> list = claimRepository.findAll();
+
+            for(Claim claim:list){
+                ClaimResponse claimResponse = ClaimConvertor.EntityToDto(claim);
+                ans.add(claimResponse);
+            }
+
+            return ans;
         }catch (Exception e){
             return null;
         }
     }
 
 
-    public Claim fetchClaim(int id){
+    public ClaimResponse fetchClaim(int id){
         try{
             Claim claim = claimRepository.findById(id).get();
-            return claim;
+            ClaimResponse claimResponse = ClaimConvertor.EntityToDto(claim);
+            return claimResponse;
         }catch (Exception e){
             return null;
         }

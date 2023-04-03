@@ -2,6 +2,7 @@ package com.example.InsuranceManagementPlatform.Controllers;
 
 import com.example.InsuranceManagementPlatform.Models.Client;
 import com.example.InsuranceManagementPlatform.RequestDTO.ClientRequest;
+import com.example.InsuranceManagementPlatform.ResponseDto.ClientResponse;
 import com.example.InsuranceManagementPlatform.Service.ClientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -16,12 +17,12 @@ public class ClientController {
     ClientService clientService;
 
     @GetMapping
-    public List<Client> fetchAllClients(){
+    public List<ClientResponse> fetchAllClients(){
         return clientService.fetchAllClients();
     }
 
     @GetMapping("/{id}")
-    public Client fetchClient(@PathVariable("id")int id){
+    public ClientResponse fetchClient(@PathVariable("id")int id){
         return clientService.fetchClient(id);
     }
 

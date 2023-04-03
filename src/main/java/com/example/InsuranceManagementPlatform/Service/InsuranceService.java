@@ -1,5 +1,6 @@
 package com.example.InsuranceManagementPlatform.Service;
 
+import com.example.InsuranceManagementPlatform.Converter.InsuranceConvertor;
 import com.example.InsuranceManagementPlatform.Enums.PolicyType;
 import com.example.InsuranceManagementPlatform.Models.Client;
 import com.example.InsuranceManagementPlatform.Models.Insurance;
@@ -7,10 +8,13 @@ import com.example.InsuranceManagementPlatform.Repository.ClientRepository;
 import com.example.InsuranceManagementPlatform.Repository.InsuranceRepository;
 import com.example.InsuranceManagementPlatform.RequestDTO.InsuranceRequest;
 import com.example.InsuranceManagementPlatform.RequestDTO.UpdateInsuranceRequest;
+import com.example.InsuranceManagementPlatform.ResponseDto.InsuranceResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -23,18 +27,27 @@ public class InsuranceService {
     @Autowired
     ClientRepository clientRepository;
 
-    public List<Insurance> fetchAllInsurancePolicies(){
+    public List<InsuranceResponse> fetchAllInsurancePolicies(){
         try{
-            return insuranceRepository.findAll();
+            List<Insurance> list = insuranceRepository.findAll();
+            List<InsuranceResponse> ans = new ArrayList<>();
+
+            for(Insurance insurance:list){
+                InsuranceResponse insuranceResponse = InsuranceConvertor.EntityToDto(insurance);
+                ans.add(insuranceResponse);
+            }
+
+            return ans;
         }catch (Exception e){
             return null;
         }
     }
 
-    public Insurance fetchInsurance(int id){
+    public InsuranceResponse fetchInsurance(int id){
         try{
             Insurance insurance = insuranceRepository.findById(id).get();
-            return insurance;
+            InsuranceResponse insuranceResponse = InsuranceConvertor.EntityToDto(insurance);
+            return insuranceResponse;
         }catch (Exception e){
             return null;
         }
@@ -49,9 +62,9 @@ public class InsuranceService {
 
             Insurance insurance = new Insurance();
 
-            insurance.setPremium(insurance.getPremium());
-            insurance.setCoverageAmount(insurance.getCoverageAmount());
-            insurance.setStartDate(new Date());
+            insurance.setPremium(insuranceRequest.getPremium());
+            insurance.setCoverageAmount(insuranceRequest.getCoverageAmount());
+            insurance.setStartDate(insuranceRequest.getStartDate());
 
             //System.out.println();
             if(type.equalsIgnoreCase("health_insurance")){

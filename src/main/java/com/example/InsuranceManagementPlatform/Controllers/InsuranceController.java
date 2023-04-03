@@ -5,6 +5,7 @@ import com.example.InsuranceManagementPlatform.Models.Insurance;
 import com.example.InsuranceManagementPlatform.RequestDTO.ClientRequest;
 import com.example.InsuranceManagementPlatform.RequestDTO.InsuranceRequest;
 import com.example.InsuranceManagementPlatform.RequestDTO.UpdateInsuranceRequest;
+import com.example.InsuranceManagementPlatform.ResponseDto.InsuranceResponse;
 import com.example.InsuranceManagementPlatform.Service.InsuranceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -20,12 +21,12 @@ public class InsuranceController {
     InsuranceService insuranceService;
 
     @GetMapping
-    public List<Insurance> fetchAllInsurancePolicies(){
+    public List<InsuranceResponse> fetchAllInsurancePolicies(){
         return insuranceService.fetchAllInsurancePolicies();
     }
 
     @GetMapping("/{id}")
-    public Insurance fetchInsurance(@PathVariable("id")int id){
+    public InsuranceResponse fetchInsurance(@PathVariable("id")int id){
         return insuranceService.fetchInsurance(id);
     }
 

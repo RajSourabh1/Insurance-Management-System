@@ -4,10 +4,12 @@ import com.example.InsuranceManagementPlatform.Converter.ClientConvertor;
 import com.example.InsuranceManagementPlatform.Models.Client;
 import com.example.InsuranceManagementPlatform.Repository.ClientRepository;
 import com.example.InsuranceManagementPlatform.RequestDTO.ClientRequest;
+import com.example.InsuranceManagementPlatform.ResponseDto.ClientResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -16,18 +18,28 @@ public class ClientService {
     @Autowired
     ClientRepository clientRepository;
 
-    public List<Client> fetchAllClients(){
+    public List<ClientResponse> fetchAllClients(){
        try{
-           return clientRepository.findAll();
+           List<Client> list = clientRepository.findAll();
+           List<ClientResponse> ans = new ArrayList<>();
+
+           for(Client client:list){
+               ClientResponse clientResponse = ClientConvertor.EntityToDto(client);
+               ans.add(clientResponse);
+           }
+
+           return ans;
        }catch (Exception e){
            return null;
        }
     }
 
-    public Client fetchClient(int id){
+    public ClientResponse fetchClient(int id){
+
         try{
             Client client = clientRepository.findById(id).get();
-            return client;
+            ClientResponse clientResponse = ClientConvertor.EntityToDto(client);
+            return clientResponse;
         }catch (Exception e){
             return null;
         }
