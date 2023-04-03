@@ -18,25 +18,20 @@ This Insurance Management application can do the following tasks :
   value of this attribute and if he does not want to update the attribut like name then provide the previous value.)
    - Get all clients.
    - Get a client by their id.
-* MOVIE
-   - Add a new movie in the database.
-Remove a movie from the database.
-Get show time with the help of theaterId and movieId
-Get Movie with max shows
-Get Movie with max collection
-Get list of all the movies with their total collection
-Get total Collection of a Movie
-SHOW
-Add a Show for a particular movie.
-Cancel a show for a movie.
-THEATER
-Add a new theater in the database.
-Remove a theater from the database.
-Get theaters with unique locations.
-TICKET
-Users can book a ticket for the movie. (User can book multiple seats on the same ticket)
-Users can cancel the ticket before the showdate.
-Get details of a ticket using ticketId
+* INSURANCE(POLICY)
+   - Create a new insurance in the database.
+   - Delete a insurance from the database using its its id i.e. policy number.
+   - Get a insurance using id from the database.
+   - Get all insurances.
+   - Update a insurance 
+* CLAIMS
+   - Create a new claim.
+   - Delete a claim.
+   - Get all claims.
+   - Get a claim.
+   - Update a claim by client. (In this api client can able to update its description.)
+   - Update a claim by admin. (In this api admin can able to update its status.)
+
 Steps to perform operations
 Users :
 => Registration of a User :
