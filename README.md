@@ -89,5 +89,5 @@ This project uses the following tech stack:
 # How to run this application locally :
 Clone the repo and open it through the spring application like IntellIJ.
 
-Conclusion :
+# Conclusion :
 This ONLINE-INSURANCE-MANAGEMENT-APPLCIATION provides a strong backend infrastructre to do CRUD operations and managing the database.
