@@ -23,7 +23,7 @@ This Insurance Management application can do the following tasks :
    - Delete a insurance from the database using its its id i.e. policy number.
    - Get a insurance using id from the database.
    - Get all insurances.
-   - Update a insurance 
+   - Update a insurance by using its id. (If anyone wants to change the value of some attributes then he will have to provide the update value of this attribute and if he does not want to update the attribute like type, startDate then provide the previous value.)
 * CLAIMS
    - Create a new claim.
    - Delete a claim.
@@ -33,79 +33,58 @@ This Insurance Management application can do the following tasks :
    - Update a claim by admin. (In this api admin can able to update its status.)
 
 Steps to perform operations
-Users :
-=> Registration of a User :
+# Clients :
+## => Registration of a Client :
 image
 
-=> De-registration of a User :
+## => Deletion of a Client with the help of id:
 image
 
-=> Updating address of a user :
+## => Updating information of a Client with the help of id:
 image
 
-=> Getting details of all the tickets booked by a particular user till now :
+## => Getting the information of a Client with the help of id:
 image image
 
-Movies :
-=> Adding a movie in the database :
+## => Getting the information of all client. 
+
+# Insurance :
+## => Creatinging a insurance in the database :
 image
 
-=> Removing a movie from the database :
+## => Removing a insurance from the database with the help of id(policyNumber):
 image
 
-=> Get show time with the help of theaterId and movieId:
+## => Getting the details of a insurance with the help of id:
 image
 
-=> Movie with max shows :
+## => Getting the details of all insurances :
 image
 
-=> Movie with max collection :
+## => Updating the information of a insurance with the help of id :
 image
 
-=> List of all the movies with their total collection :
+# Claims :
+## => Creating a claim for a insurance by providing its id :
 image
 
-=> Total Collection of a Movie :
+## => Deleting a claim by claimId :
 image
 
-Tickets :
-=> Booking a ticket by user :
+## => Getting the details of a claim using claimId
 image
 
-=> Cancellation of a ticket by user :
+## => Getting the details of all claims:
 image
 
-=> If any other users tries to book the same seats which have been booked by any other user earlier :
-image
+## => Updating the details(description) of a claim using its id: 
 
-=> Getting details of a ticket using ticketId
-image
-
-Show :
-=> Add Show :
-image
-
-=> Remove Show :
-image
-
-Theater :
-=> Adding Theater :
-image
-
-=> Removing Theater :
-image
-
-=> Theaters with unique locations :
-image
-
-Tech Stack
+# Tech Stack
 This project uses the following tech stack:
 
 - Spring Boot
 * Hibernate
 + MySQL
-Contact
-For questions, feedback, or support, please contact the project owner at pranshubarar1851996@gmail.com.
 
 Conclusion
-This ONLINE-MOVIE-TICKETING-APPLCIATION provides a strong backend infrastructre to do CRUD operations and managing the database.
+This ONLINE-INSURANCE-MANAGEMENT-APPLCIATION provides a strong backend infrastructre to do CRUD operations and managing the database.
