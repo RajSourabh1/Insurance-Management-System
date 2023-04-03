@@ -35,49 +35,66 @@ This Insurance Management application can do the following tasks :
 Steps to perform operations
 # Clients :
 ## => Registration of a Client :
-image
+image![addClient](https://user-images.githubusercontent.com/116934640/229422187-159ca297-20e7-43dc-b9d1-b62d9302a08b.png)
+
 
 ## => Deletion of a Client with the help of id:
-image
+image![deleteAClient](https://user-images.githubusercontent.com/116934640/229422329-17a94330-0a0a-436c-bf18-8ade1ac0340c.png)
+
 
 ## => Updating information of a Client with the help of id:
-image
+image![updateClient](https://user-images.githubusercontent.com/116934640/229422577-78810c1a-cb42-4911-8d60-8ac1f5b418a6.png)
+
 
 ## => Getting the information of a Client with the help of id:
-image image
+image![getAClient](https://user-images.githubusercontent.com/116934640/229422633-03c55e69-229b-472c-b7c7-125deb5b5995.png)
 
-## => Getting the information of all client. 
+
+## => Getting the information of all client.
+![AllClient](https://user-images.githubusercontent.com/116934640/229422675-b921ebba-04b7-4706-bbf8-03d7809ea733.png)
+
 
 # Insurance :
 ## => Creatinging a insurance in the database :
-image
+image![createInsurance](https://user-images.githubusercontent.com/116934640/229422708-4db401eb-1ba1-4d42-901f-1b3e9b30fbc7.png)
+
 
 ## => Removing a insurance from the database with the help of id(policyNumber):
-image
+image![deleteInsurance](https://user-images.githubusercontent.com/116934640/229422732-f04a5e40-0aed-41f6-aa0c-d5ad02bb39e1.png)
+
 
 ## => Getting the details of a insurance with the help of id:
-image
+image![getAInsurance](https://user-images.githubusercontent.com/116934640/229422778-57f473e1-ab73-4307-a0f1-8fec656c4e41.png)
+
 
 ## => Getting the details of all insurances :
-image
+image![AllInsurance](https://user-images.githubusercontent.com/116934640/229422817-64dc6adf-43de-4c87-890a-dc903c76ffcf.png)
+
 
 ## => Updating the information of a insurance with the help of id :
-image
+image![updateInsurance](https://user-images.githubusercontent.com/116934640/229422989-2bc4fad6-cd6c-468b-a5bc-e7641fab5d46.png)
+
 
 # Claims :
-## => Creating a claim for a insurance by providing its id :
-image
+## => Creating a claim for a insurance by providing its policyId :
+image![createClaim](https://user-images.githubusercontent.com/116934640/229423024-00a17c6e-c61e-42eb-bcc4-ffbcba333c4b.png)
+
 
 ## => Deleting a claim by claimId :
-image
+image![deleteClaim](https://user-images.githubusercontent.com/116934640/229423132-8d35eff3-da15-4cc2-9ad5-3527fda3c9fd.png)
+
 
 ## => Getting the details of a claim using claimId
-image
+image![getAClaim](https://user-images.githubusercontent.com/116934640/229423151-6ce5325f-78fe-4973-a915-a8fb4a7451dc.png)
+
 
 ## => Getting the details of all claims:
-image
+image![getAllClaims](https://user-images.githubusercontent.com/116934640/229423184-a73d24e6-a3f1-49ef-bb7f-cf4f37813024.png)
+
 
 ## => Updating the details(description) of a claim using its id: 
+![updateClaim](https://user-images.githubusercontent.com/116934640/229423237-d41202a1-98af-4e37-92aa-5ea56c385f59.png)
+
 
 # Tech Stack
 This project uses the following tech stack:
